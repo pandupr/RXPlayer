@@ -1,0 +1,90 @@
+body{
+	background-color: rgb(36, 34, 34);	
+}
+
+
+label{
+	font-size: 12pt;
+	font-family: Georgia;
+}
+
+img.logoRegister{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+.kotakRegister{
+	width: 500px;
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 300px;
+	padding: 30px 20px;
+
+}
+
+.tulisanRegister{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: Georgia;
+	font-size: 20px;
+}
+
+.form_register{
+	box-sizing : border-box;
+	width: 100%;
+	padding: 10px;
+	font-size: 10pt;
+	margin-bottom: 20px;
+}
+
+#radio_gender{
+	margin-left: 20px;
+}
+
+.combo{
+	padding:10px;
+	color: grey;
+}
+
+#agree{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+button {
+	background: rgb(36, 34, 34);
+	color: white;
+	font-size: 12pt;
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 20px;
+	font-family: Georgia;
+}
+
+button:hover{
+	color: black;
+	background-color: rgb(240, 69, 69)
+}
+
+span.login {
+  margin-left: 155px;
+  padding-top: 16px;
+  font-size: 16px;
+  font-family: Georgia;
+  text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	color: blue;
+}
+
+
+

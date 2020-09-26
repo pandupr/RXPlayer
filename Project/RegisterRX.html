@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="RegisterRX.css">
+	<title>Register RX Player</title>
+</head>
+<body>
+	<form action="#" onsubmit="if(document.getElementById('agree').checked) { return true; 
+	}else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+	<form name="form_registration" action="" onsubmit="return doValidation()">
+
+	
+
+	<div class="Register">
+			<a href="HomepageTest.html"><img class="logoRegister" src="assets/logo.png" height="auto" width="450px"></a>
+
+	</div>
+
+	<div class="kotakRegister">
+		<p class="tulisanRegister">Register</p>
+
+		<form>
+				<label>Full Name</label>
+				<input type="text" name="username" id="username" class="form_register" placeholder="Full Name">
+	 
+				<label>Email</label>
+				<input type="text" name="email" id="email" class="form_register" placeholder="Email">
+
+				<label>Gender </label><br>
+	            <input type="radio" name="radio_gender" id="radio_gender" value="male"> Male
+	            <input type="radio" name="radio_gender" id="radio_gender" value="female"> Female
+	            <br><br>
+				
+
+				<label>Password</label>
+				<input type="password" name="password" id="password" class="form_register" placeholder="Password">
+
+
+				<label>Confirm Password</label>
+				<input type="password" name="confirm_password" id="confirm_password" class="form_register" placeholder="Confirm Password">
+	 			
+	 			<label>Payment Method</label><br>
+	 			<select class="combo">
+					<option value="Select">Choose Your Payment Method..</option>
+					<option value="gopay">gopay</option>
+					<option value="OVO">OVO</option>
+					<option value="DANA">DANA</option>
+					<option value="Transfer">Transfer Bank</option>
+					<option value="Alfamart">Alfamart</option>
+					<option value="Indomaret">Indomaret</option>
+				</select>
+
+				<br>
+
+			 	<input type="checkbox" name="checkbox" value="check" id="agree"> I have read and agree to terms and conditions
+
+		</form>
+
+		
+
+	 	<button type="submit">Register An Account</button>	
+	 	<br><br>
+
+	    <span class="login">Have an account? <a>Log in</a>
+		</span>
+		
+		<label id="txt_err" style="color: red;"></label>
+
+	</div>
+
+</body>
+
+<script type="text/javascript">	
+	if(empty($_POST['agree']) || $_POST['agree'] != 'agree') {
+    	echo 'Please indicate that you have read and agree to the Terms and Conditions';
+	}
+
+function doValidation() {
+	let flag = true;
+    let err = '';
+
+    let FullName = document.getElementById('username').value;
+    let password = document.form_registration.password.value;
+    let reconfirm = document.getElementById('confirm_password').value;
+    let Gender = document.form_registration.radio_gender;
+
+    if(FullName.length < 5) {
+        flag = false;
+        err += "username min. 5 characters\n";
+    }
+
+    if(password != reconfirm) {
+       flag = false;
+       err += 'password doesnt match\n';
+    }
+
+    let temp = -1
+        for (let i = 0; i < Gender.length; i++) {
+            if(Gender[i].checked == true) {
+                temp = i
+                break
+            }
+        }
+        if(temp == -1) {
+            flag = false
+            err += 'choose one gender'
+        }
+
+
+// do all validation
+    if(flag == false) {
+      document.getElementById('txt_err').innerHTML = err;
+    }
+        
+        
+    return flag;
+
+}
+
+	
+
+</script>
+</html>

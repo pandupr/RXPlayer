@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RX Player</title>
+    <link rel="stylesheet" href="RXPlayerHomepage.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="logo"><img src="assets/logo.png"></div>
+        <div class="menu">
+            <div class="musicgenredropdown">
+                <button class="dropdownbtn">Menu</button>
+                <div class="dropdowncontent">
+                    <a href="HomepageTest.html">Home</a>
+                    <a href="MusicbyGenre.html">Music by Genre</a>
+                    <a href="top10music.html">Top 10 Asian Song</a>
+                    <a href="premium.html">Premium</a>
+                </div>
+            </div>    
+        </div>  
+        <div class="loginreg">
+            <a class="regisbtn" href="RegisterRX.html"><img src="assets/registerpng.png"></a>
+        </div>  
+    </div>
+
+    <div class="header">
+        <div class="top10button"><button class="top10asianbtn" onclick="location.href='top10music.html'">Top 10 Asian Song</button></div>
+        <div id="slider">
+            <div class="slider-img-container">
+                <div class="slider-img"><img src="assets/Homepage/announcement1.jpg"></div>
+                <div class="slider-img"><img id="news" src="assets/Homepage/promotion.jpg"></div>
+            </div>
+            <div class="listen">Listen on <img class="listenlogo" src="assets/logo.png"></div>
+            <div class="next"><button id="next-btn"><img src="assets/Homepage/arrow.png"></button></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="logomini"><img src="assets/logo.png"></div>
+        <div class="premium"><a id="premiumbtn" href="premium.html">Join Premium</a></div>
+        <div class="description">
+            <p>The RX player provides millions of high-quality</p>
+            <p>songs from any of the countries all around the world.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span>© 2019 RX PLAYER</span>
+        <a href="https://twitter.com"><img src="assets/twitter-icon.png"></a>
+        <a href="https://instagram.com"><img src="assets/ig-icon.png"></a>
+    </div>
+</body>
+
+<script src="jq.js"></script>
+<script>
+    $(document).ready(function() { 
+        let idx = 0;
+        let max_idx = $('.slider-img').length;
+        $('.slider-img').css("display", "none");
+        $('.slider-img').eq(idx).css("display", "block");
+        function next() {
+            $('.slider-img').css("display", "none");
+            if (idx < max_idx - 1) {
+                idx++;
+            } else {
+                idx = 0;
+            }
+            $('.slider-img').eq(idx).css("display", "block");
+        }
+        $('#next-btn').click(next); 
+    });
+</script>
+</html>

@@ -1,0 +1,293 @@
+* {box-sizing: border-box;}
+
+/*==================== navigation bar ====================*/
+button:focus{
+    outline: none;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: #434343;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: rgb(36, 34, 34);
+}
+  
+.menu a {
+    float: left;
+    font-size: 13pt;
+    color: white;
+    text-align: center;
+    padding: 3px 25px;
+    text-decoration: none;
+    margin-top: 55px;
+}
+
+.loginbtn{
+    float: left;
+    padding: 0px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.loginbtn > img {
+    width: 90%;
+}
+
+.regisbtn {
+    float: left;
+    padding: 0px;
+    margin-top: 42px;
+    margin-left: -20px;
+    margin-right: 25px;
+    overflow: hidden;
+}
+
+.regisbtn > img {
+    width: 90%;
+    height: auto;
+}
+
+.nav .logo img {
+    width: 220px;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    margin: 20px 30px;
+}
+
+.loginreg {
+    float: right;
+}
+
+.loginreg a {
+    margin-right: 30px;
+}
+
+.loginreg a:hover{
+    opacity: 0.8;
+}
+
+.homelink {
+    border-style: solid;
+    border-width: 0px 2px 0px 0px;
+    margin-left: 20px;
+}
+
+.musicgenredropdown {
+    margin-top: 55px;
+    float: left;
+    overflow: hidden;
+}
+
+.musicgenredropdown:hover .dropdownbtn, .dropdowncontent a:hover {
+    background-color: #5c5c5c;
+    color: white;
+}
+
+.dropdownbtn {
+    font-size: 13pt;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 3px 25px;
+    background-color: inherit;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    min-width: 163.5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdowncontent a {
+    float: none;
+    color: black;
+    margin-top: 0px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.musicgenredropdown:hover .dropdowncontent {
+    display: block;
+}
+/*==================== navigation bar end ====================*/
+
+
+/*==================== header ====================*/
+.header {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.header > h1 {
+    text-align: center;
+    color: white;
+}
+
+.advantages {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    color: white;
+    padding: 50px 0 10px 0;
+}
+
+.advantages img {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+
+/*==================== header end ====================*/
+
+/*==================== content ====================*/
+.content {
+    background-color: rgb(36, 34, 34);
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.content > h1 {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.benefits {
+    padding: 0;
+    margin: 0;
+}
+
+.package {
+    float: left;
+    position: relative;
+    width: 29.5%;
+    height: 545px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin: 10px 25px 50px;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.package:hover {
+    box-shadow: 0 10px 12px 5px rgba(0, 0, 0, 0.705);
+}
+
+.packageName {
+    font-size: 22pt;
+    background-color: black !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.package ul {
+    list-style: inside;
+    padding: 0;
+    text-align: left;
+}
+
+.price {
+    font-size: 15pt;
+}
+
+.package li {
+    background-color: rgb(175, 175, 175);
+    padding: 15px;
+    font-size: 16pt;
+    color: black;
+}
+
+.subscribe {
+    list-style-type: none;
+    text-align: center;
+}
+
+.package ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(228, 25, 25);
+    border: solid 3px black;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.filler {
+    list-style: none;
+    height: 54px;
+}
+/*==================== content end ====================*/
+
+/*==================== footer ====================*/
+.footer {
+    position: relative;
+    background-color: #434343;
+    padding: 30px 30px 20px;
+}
+
+.footer span {
+    float: left;
+    width: 50%;
+    font-size: 18pt;
+    font-weight: bold;
+    font-stretch: ultra-condensed;
+}
+
+.footer a img {
+    padding-bottom: 10px;
+    float: right;
+    width: 50px;
+    margin-top: -15px;
+    margin-right: 25px;
+}
+
+/*==================== footer end ====================*/
+
+/* =============== RESPONSIVE CSS ================= */
+
+/* media query created for inserting css script when the condition is fullfilled */
+@media only screen and (max-width: 800px){ 
+    .nav {
+        justify-content: flex-end;
+    }
+
+    .nav .logo img {
+        margin-right: 57%;
+        position: relative;
+        display: block;
+    }
+
+    .menu {
+        margin-left: 10px;
+    }
+
+    .premium {
+        margin-top: 75px;
+        margin-left: 5px;
+    }
+
+    .advantages {
+        width: 100%;
+    }
+
+    .package {
+        width: 75%;
+        margin: 20px 75px 30px 90px;
+    }
+
+    .package li {
+        font-size: 16pt;
+    }
+}
